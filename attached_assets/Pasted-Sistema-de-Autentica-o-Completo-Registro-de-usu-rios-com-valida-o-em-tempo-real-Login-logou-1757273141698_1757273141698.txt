@@ -1,0 +1,59 @@
+Sistema de Autenticação Completo:
+• Registro de usuários com validação em tempo real
+• Login/logout com sessões persistentes
+• Tratamento de erros e feedback visual
+• Sistema de roles (Member, VIP, Moderator, Admin)
+• Criação de Posts via Interface:
+• Formulário intuitivo com validação robusta
+• Seleção de categoria com filtros de permissão
+• Suporte a imagens via URL
+• Integração completa com o backend
+• Sistema de Comentários:
+• Visualização detalhada de posts individuais
+• Formulário de comentários para usuários logados
+• Exibição cronológica de comentários
+• Informações do autor com badges de role
+🎯 Próximos Passos Sugeridos
+Com a base do fórum sólida e funcional, a próxima fase do desenvolvimento deve focar em
+melhorias e novas funcionalidades para enriquecer a experiência do usuário. As
+prioridades sugeridas são:
+. Edição de Posts e Comentários
+• Objetivo: Permitir que os usuários editem seus próprios posts e comentários.
+• Frontend:
+• Adicionar botões de "Editar" para posts e comentários, visíveis apenas para o autor
+ou moderadores.
+• Criar um formulário de edição pré-preenchido com o conteúdo existente.
+• Integrar com a API de edição do backend.
+• Backend:
+• Implementar as rotas PUT /api/posts/<post_id> e PUT /api/comments/<comment_id> .
+• Adicionar lógica de permissão para garantir que apenas o autor ou moderadores
+possam editar.
+. Sistema de Busca
+• Objetivo: Implementar uma funcionalidade de busca para que os usuários possam
+encontrar posts relevantes.
+• Frontend:
+• Criar uma barra de busca na interface principal.
+• Desenvolver uma página de resultados de busca para exibir os posts encontrados.
+• Integrar com a API de busca do backend.
+• Backend:
+• Implementar uma rota GET /api/search que aceite uma query de busca.
+• Adicionar lógica para buscar posts por título e conteúdo.
+. Upload de Imagens
+• Objetivo: Substituir o campo de URL de imagem por um sistema de upload de arquivos.
+• Frontend:
+• Modificar o formulário de criação de posts para incluir um campo de upload de
+imagem.
+• Adicionar feedback visual durante o upload (barra de progresso, etc.).
+• Integrar com a API de upload do backend.
+• Backend:
+• Implementar uma rota para lidar com o upload de imagens.
+• Armazenar as imagens em um diretório seguro no servidor.
+• Associar a imagem ao post correspondente no banco de dados.
+. Paginação
+• Objetivo: Melhorar a performance e a usabilidade do fórum implementando paginação
+para posts e comentários.
+• Frontend:
+• Adicionar controles de paginação nas listas de posts e comentários.
+• Modificar as chamadas à API para incluir parâmetros de página.
+• Backend:
+• Atualizar as rotas de posts e comentários para suportar paginação
